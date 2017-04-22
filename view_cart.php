@@ -55,7 +55,8 @@ include_once('config.php');
 		}
 		$shipping_cost = ($shipping_cost)?'Shipping Cost : '.$currency. sprintf("%01.2f", $shipping_cost).'<br />':'';
 	}
-  $_SESSION['total'] = $shipping_cost. $list_tax;
+  $_SESSION['total'] = $grand_total;
+$_SESSION['tax'] = $tax_amount;
     ?>
 
     <tr><td colspan="5"><span style="float:right;text-align: right;"><?php echo $shipping_cost. $list_tax; ?>Amount Payable : <?php echo sprintf("%01.2f", $grand_total);?></span></td></tr>

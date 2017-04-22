@@ -20,10 +20,11 @@
     <?php
     session_start();
     $total = $_SESSION['total'];
-     ?>
+     $tax = $_SESSION['tax'];?>
      <div class="card z-depth-3">
        <div class="card-title">
-         <?= $total ?>
+        TOTAL:
+&nbsp;RS.<?= $total ?>
        </div>
        <h5> CHECKOUT SUCCESSFULL!!</h5>
      </div>
